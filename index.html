@@ -2,7 +2,7 @@
 <html>
 <head>
 <title></title>
-<!-- 2020-05-04 lun 19:53 -->
+<!-- 2020-05-04 lun 22:37 -->
 <meta  charset="utf-8" />
 <meta  htto-equiv="X-UA-Compatible" content="chrome=1" />
 <meta  name="generator" content="Org-mode with org-ioslide" />
@@ -37,8 +37,8 @@
     </slide>
   <slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
 <aside class="gdbar right bottom"><img src="images/ruby.png"></aside><hgroup class="">
-       <h2 class=" "><div id="outline-container-orgf263c67" class="outline-2">
-<h2 id="orgf263c67">Definiciónes</h2>
+       <h2 class=" "><div id="outline-container-org043cc5b" class="outline-2">
+<h2 id="org043cc5b">Definiciónes</h2>
 </div>
 </h2>
        <h3></h3>
@@ -51,8 +51,8 @@
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org5dfa269" class="outline-3">
-<h3 id="org5dfa269">Definiciónes</h3>
+       <h2 class=" "><div id="outline-container-org6a46d6b" class="outline-3">
+<h3 id="org6a46d6b">Definiciónes</h3>
 </div>
 </h2>
        <h3></h3>
@@ -62,8 +62,6 @@
 <li>Tipado</li>
 <li>Tipado estatico</li>
 <li>Tipado dinamico</li>
-<li>Tipado fuerte(BONUS)</li>
-<li>Tipado debil(BONUS)</li>
 </ul>
 
 
@@ -74,8 +72,8 @@
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orge008d3f" class="outline-3">
-<h3 id="orge008d3f">Tipado</h3>
+       <h2 class=" "><div id="outline-container-orgba30f0d" class="outline-3">
+<h3 id="orgba30f0d">Tipado</h3>
 </div>
 </h2>
        <h3></h3>
@@ -97,8 +95,8 @@ El tipado de un lenguaje define la forma como se crean y modifican las variables
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org1e1da07" class="outline-3">
-<h3 id="org1e1da07">Tipado estatico</h3>
+       <h2 class=" "><div id="outline-container-orgf272b6a" class="outline-3">
+<h3 id="orgf272b6a">Tipado estatico</h3>
 </div>
 </h2>
        <h3></h3>
@@ -124,8 +122,8 @@ El tipado de un lenguaje define la forma como se crean y modifican las variables
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgfb519f0" class="outline-3">
-<h3 id="orgfb519f0">Tipado dinamico</h3>
+       <h2 class=" "><div id="outline-container-org3939bc0" class="outline-3">
+<h3 id="org3939bc0">Tipado dinamico</h3>
 </div>
 </h2>
        <h3></h3>
@@ -149,13 +147,44 @@ El tipado de un lenguaje define la forma como se crean y modifican las variables
 </slide>
 
 </slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org678b6a6" class="outline-3">
+<h3 id="org678b6a6">Tipado estatico vs Tipado dinamico</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<ul>
+<li><p>
+Tipado estático: <b>compilador comprueba</b> que se asignan valores correctos a las variables.
+</p>
 
+<p>
+<b>Se detectan errores en tiempo compilación</b> 
+</p></li>
+<li><p>
+Tipado dinámico: el <b>compilador o interprete no</b> se sabe qué tipo de valor tiene una variable <b>hasta la ejecucion</b>. 
+</p>
+
+<p>
+<b>Permite flexibilidad</b>
+</p></li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
 
 </slide>
 <slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
 <aside class="gdbar right bottom"><img src="images/ruby.png"></aside><hgroup class="">
-       <h2 class=" "><div id="outline-container-org882be55" class="outline-2">
-<h2 id="org882be55">Proposito</h2>
+       <h2 class=" "><div id="outline-container-org67bf19e" class="outline-2">
+<h2 id="org67bf19e">Proposito</h2>
 </div>
 </h2>
        <h3></h3>
@@ -166,12 +195,70 @@ El tipado de un lenguaje define la forma como se crean y modifican las variables
 </article>
 
 </slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgc4fd4cb" class="outline-3">
+<h3 id="orgc4fd4cb">Problema</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Tengo que esperar a que el codigo se ejecute para darme cuenta de un error.
+</p>
+
+<p>
+<b>El problema no puede ser tan obvio</b>
+</p>
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="images/levitate.png" alt="levitate.png" height="300px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgc3fe21e" class="outline-3">
+<h3 id="orgc3fe21e">Solución</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Type Checker
+<b>Declarar los <code>types</code> de los argumentos y de la salida para metodos</b>
+</p>
+
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="images/sorbet.png" alt="sorbet.png" height="300px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+</slide>
 
 </slide>
 <slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
 <aside class="gdbar right bottom"><img src="images/ruby.png"></aside><hgroup class="">
-       <h2 class=" "><div id="outline-container-orgd8c5a5d" class="outline-2">
-<h2 id="orgd8c5a5d">Como usarlo</h2>
+       <h2 class=" "><div id="outline-container-orgc8f8d41" class="outline-2">
+<h2 id="orgc8f8d41">Como usarlo</h2>
 </div>
 </h2>
        <h3></h3>
@@ -182,6 +269,120 @@ El tipado de un lenguaje define la forma como se crean y modifican las variables
 </article>
 
 </slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org3b4d19f" class="outline-3">
+<h3 id="org3b4d19f">Setup</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<ul>
+<li>Agregar las siguientes lines de codigo a <code>.gemfile</code></li>
+</ul>
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="ruby\">
+...
+gem 'sorbet', :group =&gt; :development
+gem 'sorbet-runtime'</pre>
+
+</div>
+<ul>
+<li><b>Guarda todos los archivos que tengas abierto. El siguiente comando añade una linea en todos los archivos .rb que encuentre</b></li>
+<li>Iniciar Sorbet en el proyecto <code>bundle exec srb init</code></li>
+<li>Ejecuta <code>bundle exec srb tc</code> para una comprobacion inicial.</li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org466cc05" class="outline-3">
+<h3 id="org466cc05">Funcionamiento</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Sorbet comprube un archivo en las siguientes condiciones:
+</p>
+<ul>
+<li>No tienes alguna linea de la siguiente manera <b>if <span class="underline"><span class="underline">FILE</span></span> == $PROGRAM<sub>NAME</sub></b></li>
+<li>Tienes la siguiente linea arriba de todo el archivo <code>typed: true</code></li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orga6dbbd5" class="outline-3">
+<h3 id="orga6dbbd5">Demo Time</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="ruby">
+<b># typed: true</b>
+
+<b>sig {params(caster: String).returns(String)}</b>
+def levitate(caster)
+  caster.concat(": wingardium leviosa")
+end
+
+levitate("Harry")	# OK
+levitate() 		# ArgumentError
+levitate(666)		# NoMethodError</pre>
+
+</div>
+<p>
+Luego ejecutar <code>bundle exec srb tc</code>
+</p>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgea20f3c" class="outline-3">
+<h3 id="orgea20f3c">Resultado Demo 1</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="images/demo1.png" alt="demo1.png" height="300px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+</slide>
+
+
 
 </slide>
 <slide id="sec-" class=" thank-you-slide segue nobackground" style="background-image: url(nil)">
