@@ -14,7 +14,7 @@
 #+HASHTAG: #Ruby
 
 # ======= Google Analytics =========================
-#+ANALYTICS: UA-000000000-0
+#+ANALYTICS: UA-43692346-5
 
 # ======= Org settings =========================
 #+EXCLUDE_TAGS: noexport
