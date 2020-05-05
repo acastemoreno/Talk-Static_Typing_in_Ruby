@@ -117,6 +117,13 @@ if __FILE__  == $PROGRAM_NAME
 #+END_SRC
 - Tienes la siguiente linea arriba de todo el archivo =typed: true=
 
+* Demo 1
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
 ** Demo Time 1 - sin spec
   :PROPERTIES:
   :ARTICLE:  smaller
@@ -145,17 +152,17 @@ solo para nota[fn:2]
   :ARTICLE:  smaller
   :END:
 #+BEGIN_SRC ruby
-# typed: true
+<b># typed: true</b>
 
-# hace que class T sea accesible desde tiempo de ejecucion
-require "sorbet-runtime"
+<b># hace que class T sea accesible desde tiempo de ejecucion
+require "sorbet-runtime"</b>
 
 class Magic2
-  # hace al methodo sig accesible desde tiempo de ejecucion
-  extend T::Sig
+  <b># hace al methodo sig accesible desde tiempo de ejecucion
+  extend T::Sig</b>
 
-  # declara los types de parametros y return
-  sig {params(caster: String).returns(String)}
+  <b># declara los types de parametros y return
+  sig {params(caster: String).returns(String)}</b>
   def levitate(caster)
     caster.concat(": wingardium leviosa")
   end
@@ -167,15 +174,36 @@ p Magic2.new.levitate()
 #+END_SRC
 Corregir codigo y ejecutar =bundle exec srb tc= hasta que no salga error. (Probar si nos ayudo en algo)
 
+* Demo 2
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
 
-
-** Resultado Demo 1
+** 
+  :PROPERTIES:
+  :ARTICLE:  smaller
+  :END:
 #+BEGIN_CENTER
-#+ATTR_HTML: :height 300px
-[[file:images/demo1.png]]
+#+ATTR_HTML: :height 460px
+[[file:images/demo2-1.png]]
 #+END_CENTER
 
+** 
+  :PROPERTIES:
+  :ARTICLE:  smaller
+  :END:
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 460px
+[[file:images/demo2-2.png]]
+#+END_CENTER
 
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+p3[fn:3]
+p4[fn:4]
+#+END_QUOTE
 
 * Gracias ˊ・ω・ˋ
 :PROPERTIES:
@@ -186,4 +214,6 @@ Corregir codigo y ejecutar =bundle exec srb tc= hasta que no salga error. (Proba
 
 * Footnotes
 [fn:1] [[https://sorbet.org/docs/adopting][Doc - Install]]
-[fn:1] [[https://sorbet.org/docs/static][Doc - Static Check]]
+[fn:2] [[https://sorbet.org/docs/static][Doc - Static Check]]
+[fn:3] [[https://sorbet.org/docs/faq#how-should-i-add-types-to-methods-defined-with-attr_reader][Doc - Spec for attr_xxxx]]
+[fn:4] [[https://sorbet.run/#%23%20typed%3A%20true%0Aclass%20A%0A%20%20extend%20T%3A%3ASig%0A%0A%20%20sig%20%7Breturns(Integer)%7D%0A%20%20attr_reader%20%3Areader%0A%0A%20%20sig%20%7Bparams(writer%3A%20Integer).returns(Integer)%7D%0A%20%20attr_writer%20%3Awriter%0A%0A%20%20%23%20For%20attr_accessor%2C%20write%20the%20sig%20for%20the%20reader%20portion.%0A%20%20%23%20(Sorbet%20will%20use%20that%20to%20write%20the%20sig%20for%20the%20writer%20portion.)%0A%20%20sig%20%7Breturns(Integer)%7D%0A%20%20attr_accessor%20%3Aaccessor%0Aend][Example - Spec attr_xxxxx]]
