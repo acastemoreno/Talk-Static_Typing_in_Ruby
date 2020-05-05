@@ -1,7 +1,7 @@
 * Slide Options                           :noexport:
 # ======= Appear in cover-slide ====================
 #+TITLE: Tipado estático en Ruby
-#+SUBTITLE:  Definición y Uso
+#+SUBTITLE:  Definiciónes, Proposito, Uso
 #+COMPANY: Codeable
 #+AUTHOR: Albert Castellano Moreno
 
@@ -19,6 +19,58 @@
 # ======= Org settings =========================
 #+EXCLUDE_TAGS: noexport
 #+OPTIONS: toc:nil num:nil
+
+* Definiciónes
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** Definiciónes
+- Tipado
+- Tipado estatico
+- Tipado dinamico
+
+** Tipado
+Es la definicion del =type= que tendra una variable.
+
+El tipado de un lenguaje define la forma como se crean y modifican las variables.
+
+** Tipado estatico
+- Las variables llevan asociado el =type= 
+- El =type= de una variable no se puede modificar.
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 300px
+[[file:images/ejemplo-estatico.png]]
+#+END_CENTER
+
+** Tipado dinamico
+- El =type= esta asociado al valor de una variable y no a la variable en si.
+- Una variable puede contener a lo largo de su ejecucion distintos =types=
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 300px
+[[file:images/ejemplo-dinamico.png]]
+#+END_CENTER
+
+** Tipado estatico vs Tipado dinamico
+- Tipado estático: es el mismo compilador el que comprueba que se asignan valores correctos a las variables, ya que sabe de qué tipo son las variables y qué tipo de valores pueden admitir. 
+
+- Tipado dinámico: el compilador o interprete no se sabe qué tipo de valor tiene una variable hasta la ejecucion.
+
+* Proposito
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* Como usarlo
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
 
 * Gracias ˊ・ω・ˋ
 :PROPERTIES:

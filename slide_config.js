@@ -2,7 +2,7 @@ var SLIDE_CONFIG = {
    // Slide Settings
    settings: {
      title: 'Tipado estático en Ruby', 
-     subtitle: 'Definició y Uso', 
+     subtitle: 'Definiciónes, Proposito, Uso', 
      useBuilds: true, // Default: true. False will turn off slide animation builds. 
      usePrettify: true, // Default: true 
      enableSlideAreas: true, // Default: true. False turns off the click areas on either slide of the slides.
