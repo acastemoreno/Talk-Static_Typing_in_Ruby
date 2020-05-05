@@ -18,7 +18,7 @@
 
 # ======= Org settings =========================
 #+EXCLUDE_TAGS: noexport
-#+OPTIONS: toc:nil num:nil
+#+OPTIONS: toc:nil num:nil ^:nil
 
 * Definiciónes
   :PROPERTIES:
@@ -95,7 +95,7 @@ Type Checker
 
 ** Setup
 - Agregar las siguientes lines de codigo a =.gemfile=
-#+BEGIN_SRC ruby\
+#+BEGIN_SRC ruby
 ...
 gem 'sorbet', :group => :development
 gem 'sorbet-runtime'
@@ -106,7 +106,10 @@ gem 'sorbet-runtime'
 
 ** Funcionamiento
 Sorbet comprube un archivo en las siguientes condiciones:
-- No tienes alguna linea de la siguiente manera *if __FILE__ == $PROGRAM_NAME*
+- No tienes alguna linea de la siguiente manera 
+#+BEGIN_SRC ruby
+if __FILE__  == $PROGRAM_NAME
+#+END_SRC
 - Tienes la siguiente linea arriba de todo el archivo =typed: true=
 
 ** Demo Time
