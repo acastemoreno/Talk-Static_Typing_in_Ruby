@@ -1,0 +1,21 @@
+* Slide Options                           :noexport:
+# ======= Appear in cover-slide ====================
+#+TITLE: Tipado Estado en Ruby
+#+SUBTITLE:  Definició y Uso
+#+COMPANY: Codeable
+#+AUTHOR: Albert Castellano Moreno
+
+# ======= Appear in thank-you-slide ================
+#+GITHUB: http://github.com/acastemoreno
+
+# ======= Appear under each slide ==================
+#+FAVICON: images/ruby.png
+#+ICON: images/ruby.png
+#+HASHTAG: #Ruby
+
+# ======= Google Analytics =========================
+#+ANALYTICS: UA-000000000-0
+
+# ======= Org settings =========================
+#+EXCLUDE_TAGS: noexport
+#+OPTIONS: toc:nil num:nil
