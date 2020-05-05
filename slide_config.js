@@ -1,7 +1,7 @@
 var SLIDE_CONFIG = {
    // Slide Settings
    settings: {
-     title: 'Tipado Estado en Ruby', 
+     title: 'Tipado estático en Ruby', 
      subtitle: 'Definició y Uso', 
      useBuilds: true, // Default: true. False will turn off slide animation builds. 
      usePrettify: true, // Default: true 

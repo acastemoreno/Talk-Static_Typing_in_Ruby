@@ -1,7 +1,7 @@
 * Slide Options                           :noexport:
 # ======= Appear in cover-slide ====================
-#+TITLE: Tipado Estado en Ruby
-#+SUBTITLE:  Definició y Uso
+#+TITLE: Tipado estático en Ruby
+#+SUBTITLE:  Definición y Uso
 #+COMPANY: Codeable
 #+AUTHOR: Albert Castellano Moreno
 
@@ -19,3 +19,10 @@
 # ======= Org settings =========================
 #+EXCLUDE_TAGS: noexport
 #+OPTIONS: toc:nil num:nil
+
+* Gracias ˊ・ω・ˋ
+:PROPERTIES:
+:SLIDE: thank-you-slide segue
+:ASIDE: right
+:ARTICLE: flexbox vleft auto-fadein
+:END:
