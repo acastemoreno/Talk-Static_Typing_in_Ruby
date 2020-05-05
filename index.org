@@ -104,6 +104,11 @@ gem 'sorbet-runtime'
 - Iniciar Sorbet en el proyecto =bundle exec srb init=
 - Ejecuta =bundle exec srb tc= para una comprobacion inicial.
 
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+solo para nota[fn:1]
+#+END_QUOTE
+
 ** Funcionamiento
 Sorbet comprube un archivo en las siguientes condiciones:
 - No tienes alguna linea de la siguiente manera 
@@ -112,20 +117,57 @@ if __FILE__  == $PROGRAM_NAME
 #+END_SRC
 - Tienes la siguiente linea arriba de todo el archivo =typed: true=
 
-** Demo Time
+** Demo Time 1 - sin spec
+  :PROPERTIES:
+  :ARTICLE:  smaller
+  :END:
 #+BEGIN_SRC ruby
 <b># typed: true</b>
-
-<b>sig {params(caster: String).returns(String)}</b>
-def levitate(caster)
-  caster.concat(": wingardium leviosa")
+class Magic1
+  def levitate(caster)
+    caster.concat(": wingardium leviosa")
+  end
 end
 
-levitate("Harry")	# OK
-levitate() 		# ArgumentError
-levitate(666)		# NoMethodError
+p Magic1.new.levitate("Harry")	
+p Magic1.new.levitate(666)		
+p Magic1.new.levitate() 			
 #+END_SRC
-Luego ejecutar =bundle exec srb tc=
+Corregir codigo y ejecutar =bundle exec srb tc= hasta que no salga error. (Probar si nos ayudo en algo)
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+solo para nota[fn:2]
+#+END_QUOTE
+
+** Demo Time 1 - con spec
+  :PROPERTIES:
+  :ARTICLE:  smaller
+  :END:
+#+BEGIN_SRC ruby
+# typed: true
+
+# hace que class T sea accesible desde tiempo de ejecucion
+require "sorbet-runtime"
+
+class Magic2
+  # hace al methodo sig accesible desde tiempo de ejecucion
+  extend T::Sig
+
+  # declara los types de parametros y return
+  sig {params(caster: String).returns(String)}
+  def levitate(caster)
+    caster.concat(": wingardium leviosa")
+  end
+end
+
+p Magic2.new.levitate("Harry")	# OK
+p Magic2.new.levitate(666)
+p Magic2.new.levitate()
+#+END_SRC
+Corregir codigo y ejecutar =bundle exec srb tc= hasta que no salga error. (Probar si nos ayudo en algo)
+
+
 
 ** Resultado Demo 1
 #+BEGIN_CENTER
@@ -141,3 +183,7 @@ Luego ejecutar =bundle exec srb tc=
 :ASIDE: right
 :ARTICLE: flexbox vleft auto-fadein
 :END:
+
+* Footnotes
+[fn:1] [[https://sorbet.org/docs/adopting][Doc - Install]]
+[fn:1] [[https://sorbet.org/docs/static][Doc - Static Check]]
